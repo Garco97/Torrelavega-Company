@@ -216,7 +216,7 @@ bfb27555fe9d8f8f2507fc6a7abd6ce0 Assembly-CSharp.dll:.GvrAllEventsTrigger
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.Displace
 9d4bbcdd22ed7dbad0000a8abb41ce59 Assembly-CSharp.dll:.ResonanceAudioMaterialMapper
 71bb6a6b6c8f052f948db64c7dd3ca4f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
-eb16e86a5f334b927bf5fa733df298d2 Assembly-CSharp.dll:.InteraccionConBoton
+dcd04af29a23d37174ad3bf9aaa44178 Assembly-CSharp.dll:.InteraccionConBoton
 42cf7cca4cb0f9910c041c6cc6650638 Assembly-CSharp.dll:.ResonanceAudioMaterialMap
 46246a466a11017be309d31930e3d60f Assembly-CSharp.dll:.GvrTrackedController
 1f8286dbbba9b39b9120dec32b8944e4 Assembly-CSharp.dll:.GvrLaserPointer
@@ -242,6 +242,7 @@ ad9173d3a69d99153f38ed4b62226129 UnityEngine.Networking.dll:UnityEngine.Networki
 510fefd6a544e16a3ffefa557ddcba39 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 c239250f2f7641ce897064c7bd4173b0 Assembly-CSharp-firstpass.dll:UnityStandardAssets.Water.Water
 bf3913f0d6c694bf20e1d681c79a4993 Assembly-CSharp.dll:GoogleVR.GVRDemo.Teleport
+71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.TerrainScript
 aa82b3ce4c0c9b227036c0337315c5d3 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 e51c09a4cc447f11db225afcd8e3e490 Unity.TextMeshPro.dll:TMPro.TMP_Settings
 71bb6a6b6c8f052f948db64c7dd3ca4f Assembly-CSharp.dll:.GvrControllerTooltipsSimple

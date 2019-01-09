@@ -1,7 +1,7 @@
 ﻿<Properties StartupConfiguration="{B7458052-7E40-4AC3-5D30-CD08980414C1}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PracticaVR/InteraccionConBoton.cs">
     <Files>
-      <File FileName="Assets/PracticaVR/InteraccionConBoton.cs" Line="13" Column="1" />
+      <File FileName="Assets/PracticaVR/InteraccionConBoton.cs" Line="86" Column="24" />
       <File FileName="Assets/PracticaVR/GameManager.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>

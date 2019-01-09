@@ -83,7 +83,7 @@ public class InteraccionConBoton : MonoBehaviour {
 
         this.transform.SetParent(Camera.main.transform);
         this.transform.localPosition = gameObject.transform.position;
-
+        this.transform.localRotation = Quaternion.identity ;
         Debug.Log("Interaccion");
     }
 

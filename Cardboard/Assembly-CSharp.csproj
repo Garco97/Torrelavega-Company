@@ -61,7 +61,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Cube.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\GVRDemo\GVRDemoManager.cs" />
@@ -166,6 +165,8 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrVRHelpers.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
     <Compile Include="Assets\PracticaVR\Base.cs" />
+    <Compile Include="Assets\PracticaVR\Cube.cs" />
+    <Compile Include="Assets\PracticaVR\CubeSpawn.cs" />
     <Compile Include="Assets\PracticaVR\GameManager.cs" />
     <Compile Include="Assets\PracticaVR\InteraccionPorTiempo.cs" />
     <Compile Include="Assets\ResonanceAudio\Demos\Scripts\DemoPlayerController.cs" />

@@ -5,12 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-	public void reiniciar(){
+    public void reiniciar(){
 		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
 	}
 
 	public void salir(){
 		Application.Quit ();
 	}
-  
+
+
+
+   
+
 }

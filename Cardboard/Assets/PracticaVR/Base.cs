@@ -17,7 +17,7 @@ public class Base : MonoBehaviour
     void Start()
     {
 
-        transform.SetParent(Camera.main.transform);
+        this.transform.SetParent(Camera.main.transform);
         transform.localPosition = new Vector3(gameObject.transform.position.x, -1, gameObject.transform.position.z);
         transform.localRotation = Quaternion.identity;
         tiempo = Mathf.Infinity;
@@ -32,7 +32,7 @@ public class Base : MonoBehaviour
         if (Time.time - tiempo > recogidaTiempo)
         {
             //sujeto = true;
-            //interaccion();
+            interaccion();
 
         }
         if (sujeto == true)

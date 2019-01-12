@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
     public GameObject player;
 
     private Vector3 offset;
-    public float speed = 10f;
+    public float speed = 1f;
 
     void Start()
     {

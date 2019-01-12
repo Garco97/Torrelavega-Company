@@ -6,6 +6,7 @@ public class Cube : MonoBehaviour
 {
     public Transform[] spawnPoints;
     private  bool first = false;
+    private static int vidas = 3;
     public Cube()
     {
     }
@@ -25,13 +26,10 @@ public class Cube : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
 
-            this.transform.parent = null;
+        gameObject.transform.parent = null;
             if (!collision.gameObject.name.Equals("Terrain"))
             {
-                Vector3 aux2 = gameObject.transform.position;
-                gameObject.transform.position = collision.gameObject.transform.position;
-                collision.gameObject.transform.position = aux2;
-                transform.SetParent(Camera.main.transform);
+            transform.SetParent(GameObject.Find("Base").transform);
                 gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ |
                  RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ |
                  RigidbodyConstraints.FreezePositionY;
@@ -39,9 +37,29 @@ public class Cube : MonoBehaviour
             }
             else
             {
-                Destroy(this);
-            }
+            print("algo");
+            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ |
+                 RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ |
+                 RigidbodyConstraints.FreezePositionY;
+            switch (vidas)
+                {
+                    case 3:
+                        vidas = 2;
+                        GameObject.Find("life3").GetComponent<Canvas>().enabled = false;
+                        break;
+                    case 2:
+                        vidas = 1;
+                        GameObject.Find("life2").GetComponent<Canvas>().enabled = false;
+                        break;
+                    case 1:
+                        vidas = 0;
+                        GameObject.Find("life1").GetComponent<Canvas>().enabled = false;
+                        break;
+                    case 0:
+                        break;
+                }
         }
+    }
 
 
 }

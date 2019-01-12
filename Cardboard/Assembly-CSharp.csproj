@@ -165,10 +165,10 @@
     <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrVRHelpers.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
     <Compile Include="Assets\PracticaVR\Base.cs" />
+    <Compile Include="Assets\PracticaVR\CameraController.cs" />
     <Compile Include="Assets\PracticaVR\Cube.cs" />
     <Compile Include="Assets\PracticaVR\CubeSpawn.cs" />
     <Compile Include="Assets\PracticaVR\GameManager.cs" />
-    <Compile Include="Assets\PracticaVR\InteraccionPorTiempo.cs" />
     <Compile Include="Assets\ResonanceAudio\Demos\Scripts\DemoPlayerController.cs" />
     <Compile Include="Assets\ResonanceAudio\Demos\Scripts\ResonanceAudioDemo\ResonanceAudioDemoCubeController.cs" />
     <Compile Include="Assets\ResonanceAudio\Demos\Scripts\ResonanceAudioDemo\ResonanceAudioDemoManager.cs" />

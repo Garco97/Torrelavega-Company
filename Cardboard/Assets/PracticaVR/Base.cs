@@ -11,7 +11,7 @@ public class Base : MonoBehaviour
     public Rigidbody gameObjectsRigidBody;
 
     private float tiempo;
-    private bool sujeto = false;
+
 
     // Use this for initialization
     void Start()
@@ -22,68 +22,39 @@ public class Base : MonoBehaviour
         transform.localRotation = Quaternion.identity;
         tiempo = Mathf.Infinity;
         GetComponent<Renderer>().material = materialInactivo;
+
     }
 
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Time.time - tiempo > recogidaTiempo)
-        {
-            //sujeto = true;
-            interaccion();
-
-        }
-        if (sujeto == true)
-        {
-            caidaTiempo--;
-            if (caidaTiempo == 0)
-            {
-                sujeto = false;
-
-                caidaTiempo = 500;
-            }
-        }
+    
     }
-
-
-
-
-
 
     public void activa(bool activado)
     {
 
         if (activado)
         {
-
             GetComponent<Renderer>().material = materialActivo;
             Debug.Log("Activado");
-
             tiempo = Time.time;
-
         }
-
         else
         {
             GetComponent<Renderer>().material = materialInactivo;
             Debug.Log("Desactivado");
-
             tiempo = Mathf.Infinity;
-
         }
-
     }
-
 
     public void interaccion()
     {
-
-
-
-
         Debug.Log("Interaccion");
     }
+
+
+
 
 }

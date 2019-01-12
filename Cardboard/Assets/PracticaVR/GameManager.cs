@@ -12,9 +12,4 @@ public class GameManager : MonoBehaviour {
 	public void salir(){
 		Application.Quit ();
 	}
-
-
-
-   
-
 }

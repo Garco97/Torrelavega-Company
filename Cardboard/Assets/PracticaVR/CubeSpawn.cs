@@ -6,13 +6,11 @@ public class CubeSpawn : MonoBehaviour
 {
     public GameObject cube;
     private GameObject tmp;
-    private float timer = 0;
     private int contador = 0;
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("Spawn", 3f, 2f);
-        InvokeRepeating("Avanza", 3f, 2f);
+        InvokeRepeating("Spawn", 10f, 4f);
     }
 
     public void Update()
@@ -23,11 +21,7 @@ public class CubeSpawn : MonoBehaviour
     public void Spawn()
     {
         contador++;
-       tmp = Instantiate(cube, gameObject.transform.position, Quaternion.identity);
-        tmp.gameObject.name="cubo" + contador;
-    }
-    public void Avanza()
-    {
-        transform.position = new Vector3(transform.position.x, transform.position.y + 1, transform.position.z);
+        tmp = Instantiate(cube, gameObject.transform.position, Quaternion.identity);
+        tmp.gameObject.name = "cubo" + contador;
     }
 }

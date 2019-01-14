@@ -25,23 +25,26 @@ public class Cube : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-
-        gameObject.transform.parent = null;
+        if (!first)
+        {
+            first = true;
+            gameObject.transform.parent = null;
             if (!collision.gameObject.name.Equals("Terrain"))
             {
-            transform.SetParent(GameObject.Find("Base").transform);
+                transform.SetParent(GameObject.Find("torre").transform);
                 gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ |
                  RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ |
                  RigidbodyConstraints.FreezePositionY;
+                GameObject.Find("torre").transform.position = new Vector3(GameObject.Find("torre").transform.position.x,
+                                               GameObject.Find("torre").transform.position.y - 0.9f, GameObject.Find("torre").transform.position.z);
 
             }
             else
             {
-            print("algo");
-            gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ |
-                 RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ |
-                 RigidbodyConstraints.FreezePositionY;
-            switch (vidas)
+                gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ |
+                     RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ |
+                     RigidbodyConstraints.FreezePositionY;
+                switch (vidas)
                 {
                     case 3:
                         vidas = 2;
@@ -56,8 +59,11 @@ public class Cube : MonoBehaviour
                         GameObject.Find("life1").GetComponent<Canvas>().enabled = false;
                         break;
                     case 0:
+                        GameObject.Find("youdieCanvas").GetComponent<Canvas>().enabled = true;
                         break;
                 }
+                Destroy(gameObject);
+            }
         }
     }
 

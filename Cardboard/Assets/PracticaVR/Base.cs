@@ -17,7 +17,7 @@ public class Base : MonoBehaviour
     void Start()
     {
 
-        this.transform.SetParent(Camera.main.transform);
+        this.transform.SetParent(GameObject.Find("torre").transform);
         transform.localPosition = new Vector3(gameObject.transform.position.x, -1, gameObject.transform.position.z);
         transform.localRotation = Quaternion.identity;
         tiempo = Mathf.Infinity;
@@ -54,7 +54,7 @@ public class Base : MonoBehaviour
         Debug.Log("Interaccion");
     }
 
-
+ 
 
 
 }

@@ -76,6 +76,11 @@
     <Compile Include="Assets\GoogleVR\Legacy\Editor\Audio\GvrAudioRoomEditor.cs" />
     <Compile Include="Assets\GoogleVR\Legacy\Editor\Audio\GvrAudioSoundfieldEditor.cs" />
     <Compile Include="Assets\GoogleVR\Legacy\Editor\Audio\GvrAudioSourceEditor.cs" />
+    <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\EffectControllerInspector.cs" />
+    <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\EffectToolBar.cs" />
+    <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\RenderEffectInspector.cs" />
+    <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\ShaderCustomEditor\ShaderMaterialsEditor.cs" />
+    <Compile Include="Assets\Particlecollection_Free samples\Plugins\Effect\Editor\XUIUtils.cs" />
     <Compile Include="Assets\ResonanceAudio\Editor\ResonanceAudioBuildProcessor.cs" />
     <Compile Include="Assets\ResonanceAudio\Editor\ResonanceAudioListenerEditor.cs" />
     <Compile Include="Assets\ResonanceAudio\Editor\ResonanceAudioMaterialMapEditor.cs" />
@@ -84,6 +89,7 @@
     <Compile Include="Assets\ResonanceAudio\Editor\ResonanceAudioReverbProbeEditor.cs" />
     <Compile Include="Assets\ResonanceAudio\Editor\ResonanceAudioRoomEditor.cs" />
     <Compile Include="Assets\ResonanceAudio\Editor\ResonanceAudioSourceEditor.cs" />
+    <Compile Include="Assets\Simple Helvetica\Editor\SimpleHelveticaCustomEditor.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>/Users/diego/Repositorios/Torrelavega-Company/Cardboard/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

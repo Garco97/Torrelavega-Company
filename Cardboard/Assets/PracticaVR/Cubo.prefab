@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 2640982769259969957}
   m_Layer: 0
   m_Name: Cubo
-  m_TagString: Untagged
+  m_TagString: Cubo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,6 +111,7 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: a74e88492fa30e540a88a0a28e6dd93c, type: 2}
   material2: {fileID: 2100000, guid: 210ea41a2053ce44dbccbb72c4684f6e, type: 2}
   material3: {fileID: 2100000, guid: 9ed82dbb7ec6291449fb8709e3019461, type: 2}
+  particlesAll: {fileID: 100672, guid: 7dc0b63f67faaf9479803bcfdff7f71e, type: 3}
 --- !u!54 &3472110596547537671
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -19,7 +19,6 @@ public class CubeSpawn : MonoBehaviour
     public void Spawn()
     {
         Vector3 pos = RandomCircle(_center, 10.0f);
-        print(pos.ToString());
         Quaternion rot = Quaternion.FromToRotation(Vector3.forward, _center - pos);
         contador++;
         tmp = Instantiate(cube, pos, rot);

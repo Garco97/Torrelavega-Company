@@ -11,6 +11,9 @@ public class Cube : MonoBehaviour
     public Material material2;
     public Material material3;
 
+    public GameObject particlesAll;
+    
+
 
     public Cube()
     {
@@ -52,12 +55,13 @@ public class Cube : MonoBehaviour
             gameObject.transform.parent = null;
             if (!collision.gameObject.name.Equals("Terrain"))
             {
+                Explode(collision.gameObject.transform.position);
                 transform.SetParent(GameObject.Find("torre").transform);
                 gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ |
                  RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ |
                  RigidbodyConstraints.FreezePositionY;
                 GameObject.Find("torre").transform.position = new Vector3(GameObject.Find("torre").transform.position.x,
-                                               GameObject.Find("torre").transform.position.y - 0.9f, GameObject.Find("torre").transform.position.z);
+                                         GameObject.Find("torre").transform.position.y - 0.9f, GameObject.Find("torre").transform.position.z);
 
             }
             else
@@ -78,15 +82,33 @@ public class Cube : MonoBehaviour
                     case 1:
                         vidas = 0;
                         GameObject.Find("life1").GetComponent<Canvas>().enabled = false;
+
+                        var Cubo = GameObject.FindGameObjectsWithTag("Cubo");
+                        foreach( GameObject item  in Cubo){
+                            Destroy(item);
+                        }
+                        Destroy(GameObject.Find("CubeSpawn"));
                         break;
-                    case 0:
-                        GameObject.Find("youdieCanvas").GetComponent<Canvas>().enabled = true;
-                        break;
+
+
+
                 }
                 Destroy(gameObject);
             }
         }
     }
 
+
+    private void Explode(Vector3 position)
+    {
+        GameObject particles = Instantiate(particlesAll, position, Quaternion.identity);
+        particles.GetComponent<ParticleSystem>().Play();
+    }
+
+     void OnDestroy()
+    {
+        Explode(gameObject.transform.position);
+       
+    }
 
 }

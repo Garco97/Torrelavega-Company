@@ -7,12 +7,31 @@ public class Cube : MonoBehaviour
     public Transform[] spawnPoints;
     private  bool first = false;
     private static int vidas = 3;
+    public Material material;
+    public Material material2;
+    public Material material3;
+
+
     public Cube()
     {
     }
     // Start is called before the first frame update
     void Start()
     {
+        float color = Random.Range(0, 1000);
+        if (color % 3 == 0)
+        { 
+        GetComponent<Renderer>().material = material;
+        }else if(color % 3 == 1)
+        {
+            GetComponent<Renderer>().material = material2;
+
+        }
+        else if(color % 3 == 2)
+        {
+            GetComponent<Renderer>().material = material3;
+
+        }
 
 
     }
@@ -25,6 +44,8 @@ public class Cube : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+
+        gameObject.GetComponent<AudioSource>().enabled = false;
         if (!first)
         {
             first = true;

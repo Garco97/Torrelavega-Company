@@ -108,6 +108,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoints: []
+  material: {fileID: 2100000, guid: a74e88492fa30e540a88a0a28e6dd93c, type: 2}
+  material2: {fileID: 2100000, guid: 210ea41a2053ce44dbccbb72c4684f6e, type: 2}
+  material3: {fileID: 2100000, guid: 9ed82dbb7ec6291449fb8709e3019461, type: 2}
 --- !u!54 &3472110596547537671
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,7 +138,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 248799cb4acba48f7b3ee842a80f788c,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: a6579b68e344d4776b5784b4b0c170f2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2b861e056143346ca80810d4cf104116, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

@@ -1315,11 +1315,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100218, guid: ce72191ecb9a24885b5711cd938314a3, type: 3}
       propertyPath: m_Name
-      value: Simple Helvetica
+      value: GameOver
       objectReference: {fileID: 0}
     - target: {fileID: 100218, guid: ce72191ecb9a24885b5711cd938314a3, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400218, guid: ce72191ecb9a24885b5711cd938314a3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1879,6 +1879,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100116, guid: ce72191ecb9a24885b5711cd938314a3, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300216, guid: ce72191ecb9a24885b5711cd938314a3, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

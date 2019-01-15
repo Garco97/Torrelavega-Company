@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TowerScript : MonoBehaviour
 {
+    private int score;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,6 +13,11 @@ public class TowerScript : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+
+    private void OnCollision(Collision collision)
     {
 
     }

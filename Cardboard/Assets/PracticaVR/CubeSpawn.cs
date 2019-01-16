@@ -12,7 +12,7 @@ public class CubeSpawn : MonoBehaviour
     void Start()
     {
         _center = transform.position;
-        InvokeRepeating("Spawn", 1f, 4f);
+        InvokeRepeating("Spawn", 3f, 4f);
     }
 
 

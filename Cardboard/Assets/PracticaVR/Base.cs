@@ -18,7 +18,7 @@ public class Base : MonoBehaviour
     {
 
         this.transform.SetParent(GameObject.Find("torre").transform);
-        transform.localPosition = new Vector3(gameObject.transform.position.x, -1, gameObject.transform.position.z);
+        transform.localPosition = new Vector3(gameObject.transform.position.x, -0.5f, gameObject.transform.position.z);
         transform.localRotation = Quaternion.identity;
         tiempo = Mathf.Infinity;
         GetComponent<Renderer>().material = materialInactivo;

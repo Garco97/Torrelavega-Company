@@ -10,7 +10,7 @@ public class Cube : MonoBehaviour
     public Material material;
     public Material material2;
     public Material material3;
-
+    private static int score = 0;
     public GameObject particlesAll;
     
 
@@ -21,22 +21,19 @@ public class Cube : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        float color = Random.Range(0, 1000);
-        if (color % 3 == 0)
-        { 
-        GetComponent<Renderer>().material = material;
-        }else if(color % 3 == 1)
+        int color = Random.Range(0, 1000);
+        switch (color % 3)
         {
-            GetComponent<Renderer>().material = material2;
-
+            case 0:
+                GetComponent<Renderer>().material = material;
+                break;
+            case 1:
+                GetComponent<Renderer>().material = material2;
+                break;
+            case 2:
+                GetComponent<Renderer>().material = material3;
+                break;
         }
-        else if(color % 3 == 2)
-        {
-            GetComponent<Renderer>().material = material3;
-
-        }
-
-
     }
 
     // Update is called once per frame
@@ -63,6 +60,9 @@ public class Cube : MonoBehaviour
                 GameObject.Find("torre").transform.position = new Vector3(GameObject.Find("torre").transform.position.x,
                                          GameObject.Find("torre").transform.position.y - 0.9f, GameObject.Find("torre").transform.position.z);
 
+                score = score + 1;
+                print(Camera.main.transform.GetChild(1).GetChild(3).GetChild(0).name);
+                Camera.main.transform.GetChild(1).GetChild(3).GetChild(0).gameObject.GetComponent<TextMesh>().text = score.ToString();
             }
             else
             {
@@ -87,6 +87,9 @@ public class Cube : MonoBehaviour
                         foreach( GameObject item  in Cubo){
                             Destroy(item);
                         }
+                        Camera.main.transform.GetChild(3).gameObject.SetActive(true);
+
+
                         Destroy(GameObject.Find("CubeSpawn"));
                         Application.Quit();
 

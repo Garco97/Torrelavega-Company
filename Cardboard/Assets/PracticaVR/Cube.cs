@@ -91,7 +91,6 @@ public class Cube : MonoBehaviour
 
 
                         Destroy(GameObject.Find("CubeSpawn"));
-                        Application.Quit();
 
                         break;
                 }

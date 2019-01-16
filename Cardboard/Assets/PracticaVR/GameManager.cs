@@ -12,11 +12,5 @@ public class GameManager : MonoBehaviour {
 
 
     }
-    public void reiniciar(){
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
-	}
 
-	public void salir(){
-		Application.Quit ();
-	}
 }
